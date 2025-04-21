@@ -1,3 +1,1 @@
-// import { types } from "@babel/core";
-
-// <reference types=""/>
+/// <reference types="nativewind/types" />
