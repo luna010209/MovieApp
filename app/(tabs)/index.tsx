@@ -4,8 +4,7 @@ import { Link } from "expo-router";
 export default function Index() {
   return (
     <View className="flex-1 justify-center items-center">
-      <Text className="text-accent font-bold">Welcome to Expo</Text>
-      <Link href={`/OnBoarding`} className="text-5xl text-primary font-bold">Onboarding</Link>
+      <Text className="text-primary font-bold text-4xl">Welcome to Expo</Text>
     </View>
   );
 }
