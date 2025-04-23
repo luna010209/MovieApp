@@ -2,9 +2,13 @@ import { Image, ScrollView, Text, View } from "react-native";
 import { Link } from "expo-router";
 import { images } from "@/constant/images";
 import { icons } from "@/constant/icons";
+import { useRoute } from "@react-navigation/native";
 
 
 export default function Index() {
+  const router = useRoute();
+
+  const {data:movies} = useFetch()
   return (
     <View className="flex-1 justify-center items-center">
       <Image source={images.bg} className="absolute h-full w-full"/>
