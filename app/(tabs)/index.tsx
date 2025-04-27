@@ -15,7 +15,7 @@ export default function Index() {
     loading: moviesLoading,
     error: moviesError
   } = useFetch(()=> fetchMovies({
-    query: ''
+    query: 'iron'
   }));
 
   return (
@@ -36,7 +36,7 @@ export default function Index() {
           ) : (
             <View className="flex-1 mt-5 w-full px-3">
                 <>
-                  <Text className="text-lg text-white font-bold mt-5 mb-3">
+                  <Text className="text-2xl text-white font-bold mt-5 mb-3">
                     Lastest movies
                   </Text>
 
