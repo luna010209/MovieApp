@@ -53,7 +53,7 @@ export default function Index() {
                       justifyContent:"flex-start",
                       gap:20,
                       paddingRight:5,
-
+                      marginVertical:16
                     }}
                     className="mt-2 pb-32"
                     scrollEnabled={false}
