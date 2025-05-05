@@ -13,7 +13,7 @@ const MovieCard = ({id, poster_path, title, vote_average, release_date}: Movie) 
             `https://image.tmdb.org/t/p/w500${poster_path}`:
             `https://placehold.co/600x400/1a1a1a/ffffff.png`
           }}
-          className='w-full h-52 rounded-lg mt-3'
+          className='w-full h-52 rounded-lg'
           resizeMode='cover'
         />
         <Text className='text-white font-bold mb-1' numberOfLines={1}>{title}</Text>
