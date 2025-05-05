@@ -28,6 +28,7 @@ const _layout = () => {
       //     backgroundColor:"#041A2C"
       //   }
       // }}
+      initialRouteName="search"
     >
       <Tabs.Screen
         name='index'
