@@ -15,13 +15,24 @@ const search = () => {
     data: movies,
     loading,
     error,
+    refetch: loadMovies,
+    reset,
   } = useFetch(()=> fetchMovies({
     query: searchQuery
   }), false)
 
-  // useEffect(()=>{
-  //   if
-  // })
+  useEffect(()=>{
+    const timeoutId = setTimeout(async()=>{
+      if (searchQuery.trim()){
+        await loadMovies();
+      } else {
+        reset()
+      }
+    }, 500)
+    
+    return () => clearTimeout(timeoutId);
+  }, [searchQuery]);
+
   return (
     <View className='flex-1'>
       <Image source={images.bg} className="flex-1 absolute w-full"/>
@@ -70,6 +81,15 @@ const search = () => {
             ) }
           </>
         }
+        ListEmptyComponent={
+          !loading && !error ? (
+            <View>
+              <Text className='text-center text-secondary'>
+                {searchQuery.trim()? 'No movies found': 'Search for a movie'}
+              </Text>
+            </View>
+          ) : null
+        } 
       />
     </View>
   )
